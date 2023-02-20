@@ -213,3 +213,30 @@
     ></script>
   </body>
 </html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Displaying a Folder of Images in HTML</title>
+  </head>
+  <body>
+    <h1>My Image Gallery</h1>
+    <div id="image-container"></div>
+    <script>
+      // Define the folder path and file extension
+      const folderPath = 'Images/';
+      const fileExt = '.jpg';
+
+      // Define the number of images to load
+      const numImages = 9999;
+
+      // Loop through the images and add them to the page
+      for (let i = 1; i <= numImages; i++) {
+        const img = document.createElement('img');
+        img.src = folderPath + 'image' + i + fileExt;
+        img.alt = 'Image ' + i;
+        document.getElementById('image-container').appendChild(img);
+      }
+    </script>
+  </body>
+</html>
+
